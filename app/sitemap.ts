@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/seo'
 
+// Requis pour `output: 'export'` (export statique Hostinger).
+export const dynamic = 'force-static'
+
 /**
  * Sitemap dynamique natif Next.js (App Router).
  * Servi automatiquement sous /sitemap.xml — pas besoin de configuration serveur.

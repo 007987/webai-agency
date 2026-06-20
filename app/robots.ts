@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/seo'
 
+// Requis pour `output: 'export'` (export statique Hostinger).
+export const dynamic = 'force-static'
+
 /**
  * robots.txt dynamique natif Next.js (App Router).
  * Servi automatiquement sous /robots.txt.
