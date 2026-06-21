@@ -17,7 +17,7 @@ export default function CtaSection() {
     <section
       ref={ref}
       id="contact"
-      className="relative overflow-hidden text-center py-36 px-12"
+      className="relative overflow-hidden text-center py-24 md:py-36 px-6 md:px-12"
       style={{ background: '#FAFAF6', borderTop: '1px solid rgba(17,16,9,0.06)' }}
     >
       {/* Soft gold glow + grain — keeps the block airy and premium */}

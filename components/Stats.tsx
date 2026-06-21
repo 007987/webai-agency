@@ -55,7 +55,7 @@ export default function Stats() {
     <section
       ref={ref}
       id="agence"
-      className="px-12 pt-28 pb-24 grid grid-cols-[5fr_7fr] gap-16 items-center"
+      className="px-6 md:px-12 pt-16 md:pt-28 pb-16 md:pb-24 grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 md:gap-16 items-center"
       style={{ background: '#FFFFFF', borderBottom: '1px solid rgba(17,16,9,0.07)' }}
     >
       {/* ── TITRE GAUCHE ── */}
@@ -76,8 +76,8 @@ export default function Stats() {
         </h2>
       </div>
 
-      {/* ── GRILLE DES STATS — 3 colonnes parfaitement symétriques ── */}
-      <div className="grid grid-cols-3 gap-0">
+      {/* ── GRILLE DES STATS — empilées sur mobile, 3 colonnes sur tablette+ ── */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
         {stats.map((s, i) => (
           <div
             key={i}

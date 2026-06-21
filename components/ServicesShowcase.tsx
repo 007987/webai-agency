@@ -90,10 +90,10 @@ export default function ServicesShowcase() {
       ref={sectionRef}
       style={{ background: '#F7F5F1', borderTop: '1px solid rgba(17,16,9,0.06)' }}
     >
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 42%' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_42%]">
 
         {/* ── LEFT: service index ────────────────────────────── */}
-        <div style={{ padding: '96px 48px 96px 48px', borderRight: '1px solid rgba(17,16,9,0.06)' }}>
+        <div className="px-6 py-16 md:px-12 md:py-24 lg:px-12 lg:py-24 lg:border-r border-zinc-100" style={{ borderRightColor: 'rgba(17,16,9,0.06)' }}>
 
           {/* Header */}
           <div className="rv" style={{ marginBottom: 56 }}>
@@ -220,8 +220,8 @@ export default function ServicesShowcase() {
           </div>
         </div>
 
-        {/* ── RIGHT: sticky cinematic image panel ───────────── */}
-        <div style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden' }}>
+        {/* ── RIGHT: sticky cinematic image panel — desktop uniquement ── */}
+        <div className="hidden lg:block" style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden' }}>
           {SERVICES.map((s, i) => (
             <div
               key={i}

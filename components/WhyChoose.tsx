@@ -40,10 +40,10 @@ export default function WhyChoose() {
   }, [])
 
   return (
-    <section ref={ref} className="px-12 py-24" style={{ borderBottom: '1px solid rgba(17,16,9,0.06)' }}>
+    <section ref={ref} className="px-6 md:px-12 py-16 md:py-24" style={{ borderBottom: '1px solid rgba(17,16,9,0.06)' }}>
 
       {/* ── EN-TÊTE ── */}
-      <div className="rv flex justify-between items-end mb-16" style={{ borderBottom: '1px solid rgba(17,16,9,0.06)', paddingBottom: '20px' }}>
+      <div className="rv flex flex-col md:flex-row md:justify-between md:items-end gap-4 md:gap-6 mb-10 md:mb-16" style={{ borderBottom: '1px solid rgba(17,16,9,0.06)', paddingBottom: '20px' }}>
         <div>
           <p className="text-[10px] uppercase tracking-[0.3em] font-medium mb-3" style={{ color: '#807C73' }}>
             Notre Valeur Ajoutée
@@ -52,7 +52,7 @@ export default function WhyChoose() {
             className="font-bold"
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(26px, 3vw, 38px)',
+              fontSize: 'clamp(24px, 3vw, 38px)',
               color: '#111009',
               letterSpacing: '-0.015em',
               lineHeight: 1.05,
@@ -62,7 +62,7 @@ export default function WhyChoose() {
           </h2>
         </div>
         <p
-          className="text-[11px] font-light max-w-[300px] text-right leading-[1.78]"
+          className="text-[11px] font-light max-w-[300px] md:text-right leading-[1.78]"
           style={{ color: 'rgba(17,16,9,0.52)' }}
         >
           6 engagements d&apos;élite qui redéfinissent les standards du web et propulsent votre business.
@@ -70,11 +70,11 @@ export default function WhyChoose() {
       </div>
 
       {/* ── GRILLE ── */}
-      <div className="grid grid-cols-3 gap-0.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0.5">
         {reasons.map((r, i) => (
           <div
             key={i}
-            className={`service-card p-9 rv ${i === 1 ? 'd1' : i === 2 ? 'd2' : i === 3 ? 'd1' : i === 4 ? 'd2' : ''}`}
+            className={`service-card p-6 md:p-9 rv ${i === 1 ? 'd1' : i === 2 ? 'd2' : i === 3 ? 'd1' : i === 4 ? 'd2' : ''}`}
             data-hover
           >
             <div

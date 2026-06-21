@@ -112,22 +112,22 @@ export default function BentoShowcase() {
   }, [])
 
   return (
-    <section ref={ref} className="px-12 py-28" style={{ background: '#FAFAF6', borderTop: '1px solid rgba(17,16,9,0.06)', borderBottom: '1px solid rgba(17,16,9,0.06)' }}>
+    <section ref={ref} className="px-6 md:px-12 py-16 md:py-28" style={{ background: '#FAFAF6', borderTop: '1px solid rgba(17,16,9,0.06)', borderBottom: '1px solid rgba(17,16,9,0.06)' }}>
 
       {/* Header */}
-      <div className="rv mb-16 max-w-2xl">
+      <div className="rv mb-10 md:mb-16 max-w-2xl">
         <p className="text-[10px] uppercase tracking-[0.3em] font-medium mb-4" style={{ color: '#807C73' }}>Notre savoir-faire</p>
-        <h2 className="font-bold leading-tight" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,3.5vw,46px)', color: '#111009', letterSpacing: '-0.02em' }}>
+        <h2 className="font-bold leading-tight" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px,3.5vw,46px)', color: '#111009', letterSpacing: '-0.02em' }}>
           Une ingénierie digitale<br />pensée dans le détail.
         </h2>
       </div>
 
       {/* Bento grid */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {CELLS.map((cell, i) => (
           <div
             key={i}
-            className={`lux-card rv p-8 flex flex-col group ${cell.span === 2 ? 'col-span-2' : 'col-span-1'}`}
+            className={`lux-card rv p-6 md:p-8 flex flex-col group ${cell.span === 2 ? 'sm:col-span-2' : 'col-span-1'}`}
             style={{ transitionDelay: `${i * 0.08}s` }}
             data-hover
           >
